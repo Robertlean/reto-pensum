@@ -1,0 +1,119 @@
+{
+	"Empatía": {
+		"link": "https://www.adams.es/cursos-gratuitos/habilidades-directivas-personales/escucha-activa-empatia-asertividad-/26811#.X-QqfGQzarw",
+		"scheduled_days": 2,
+		"requires": []
+	},
+	"Pensamiento crítico": {
+		"link": "https://www.edx.org/es/course/pensamiento-critico-toma-de-decisiones-razonadas",
+		"scheduled_days": 3,
+		"requires": [
+			"Empatía"
+		]
+	},
+	"Creatividad": {
+		"link": "https://www.edx.org/es/course/pensamiento-creativo",
+		"scheduled_days": 4,
+		"requires": [
+			"Empatía"
+		]
+	},
+	"Flexibilidad cognitiva": {
+		"link": "https://www.cognifit.com/es/flexibilidad-cognitiva",
+		"scheduled_days": 5,
+		"requires": [
+			"Pensamiento crítico"
+		]
+	},
+	"Capacidad de negociación": {
+		"link": "https://www.tutellus.com/negocio/habilidades-emocionales/curso-de-habilidades-de-negociacion-para-mentes-inquietas-681",
+		"scheduled_days": 4,
+		"requires": [
+			"Pensamiento crítico",
+			"Creatividad"
+		]
+	},
+	"Inteligencia emocional": {
+		"link": "https://edutin.com/curso-de-inteligencia-emocional-4406",
+		"scheduled_days": 4,
+		"requires": [
+			"Creatividad"
+		]
+	},
+	"Comunicación asertiva": {
+		"link": "https://edutin.com/curso-de-comunicacion-y-habilidades-sociales-4316",
+		"scheduled_days": 4,
+		"requires": [
+			"Flexibilidad cognitiva",
+			"Capacidad de negociación"
+		]
+	},
+	"Toma de decisiones": {
+		"link": "https://cursosgratuitos.es/curso-gratuito-curso-de-toma-de-decisiones-eficaces/",
+		"scheduled_days": 4,
+		"requires": [
+			"Capacidad de negociación",
+			"Inteligencia emocional"
+		]
+	},
+	"Orientación al servicio": {
+		"link": "https://www.fundacionmaude.com/cursos/estrategias-de-servicio-calidad-y-orientacion-al-cliente/",
+		"scheduled_days": 4,
+		"requires": [
+			"Inteligencia emocional"
+		]
+	},
+	"Solución de problemas complejos": {
+		"link": "https://www.edx.org/es/aprende/solucion-de-problemas",
+		"scheduled_days": 5,
+		"requires": [
+			"Comunicación asertiva",
+			"Toma de decisiones"
+		]
+	},
+	"Gestión de proyectos": {
+		"link": "https://www.edx.org/es/course/introduccion-a-la-gestion-de-proyectos",
+		"scheduled_days": 5,
+		"requires": [
+			"Toma de decisiones",
+			"Orientación al servicio"
+		]
+	},
+	"Clean Architecture": {
+		"link": "https://medium.com/@efexepe/curso-de-clean-architecture-con-flutter-9d48103499c2",
+		"scheduled_days": 4,
+		"requires": [
+			"Solución de problemas complejos",
+			"Gestión de proyectos"
+		]
+	},
+	"Seguridad informática": {
+		"link": "https://capacitateparaelempleo.org/pages.php?r=.tema&tagID=11684",
+		"scheduled_days": 3,
+		"requires": [
+			"Gestión de proyectos"
+		]
+	},
+	"Control de versiones (git)": {
+		"link": "https://capacitateparaelempleo.org/pages.php?r=.tema&tagID=11132",
+		"scheduled_days": 4,
+		"requires": [
+			"Clean Architecture"
+		]
+	},
+	"Línea de comandos (zsh)": {
+		"link": "https://www.linkedin.com/learning/learning-zsh",
+		"scheduled_days": 5,
+		"requires": [
+			"Clean Architecture"
+		]
+	},
+	"Editores (VSCode)": {
+		"link": "https://www.linkedin.com/learning/aprende-visual-studio-code/presentacion-del-curso-aprende-visual-studio-code",
+		"scheduled_days": 2,
+		"requires": [
+			"Control de versiones (git)",
+			"Línea de comandos (zsh)"
+		]
+	}
+}

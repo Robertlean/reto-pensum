@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel='stylesheet' href='/stylesheets/style.css' />
+  <title>Home</title>
+</head>
+<body>
+
+  <h4>Ver ejemplo <a href="/muestra">Aquí</a></h4>
+  <div class="pentagono">
+    <h5>Holis</h5>
+    <svg id="svgContainer" height="200" width="250">
+    <polygon id="poligono" points="" style="fill:#cac4a7; stroke:#e5e5e5; stroke-width:3;"></polygon>
+  </svg>
+  <script>
+    var cx = 125;
+    var cy = 100;
+    var r = 70;
+    var lados = 6;
+    // la función points
+    function points(cx, cy, r, lados){
+    var a = 360/lados;
+    // inicia la variable points
+    var points= (cx+r)+","+cy+" ";
+    // calcula el resto de los puntos
+        for(var i=1;i <= lados;i++){
+            var aRad=  (Math.PI / 180) * (a*i);
+            Xp = cx+r * Math.cos(aRad);
+            Yp = cy+r * Math.sin(aRad);
+            points += Xp+","+Yp+" ";
+        }
+    // devuelve la variable points			
+    return points	
+    }
+    // busca el elemento #poligono
+    var poligono = document.getElementById("poligono");	
+    // modifica el valor del atributo points utilizando la función points.
+    poligono.setAttribute("points", points(cx, cy, r, lados));
+  </script>
+  
+    <p> <%=cursos[0] %> </p>
+
+  </div>
+
+  
+  
+</body>
+</html>
