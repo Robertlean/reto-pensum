@@ -8,3 +8,14 @@ body {
 a {
   color: #00B7FF;
 }
+
+.pentagono{
+  display: flex;
+  margin: auto
+}
+.pentagono .text{
+  position: absolute;
+  z-index: 1;
+  top: 3em;
+  left: 7em;
+}
