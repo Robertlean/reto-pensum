@@ -13,9 +13,11 @@ a {
   display: flex;
   margin: auto
 }
-.pentagono .text{
+.contenedor{
+  display: flex;
+  flex-direction: column;
   position: absolute;
   z-index: 1;
-  top: 3em;
-  left: 7em;
+  top: 10em;
+  left: 5em;
 }

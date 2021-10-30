@@ -11,11 +11,7 @@
 
   <h4>Ver ejemplo <a href="/muestra">Aquí</a></h4>
   <div class="pentagono">
-    <div class="text">
-      <h5>Holis</h5>
-    </div>
-    
-    <svg id="svgContainer" height="200" width="250">
+        <svg id="svgContainer" height="200" width="250">
       <polygon id="poligono" points="" style="fill:#cac4a7; stroke:#e5e5e5; stroke-width:5;"></polygon>
     </svg>
     <script>
@@ -44,11 +40,14 @@
       poligono.setAttribute("points", points(cx, cy, r, lados));
     </script>
 
-    <% for(let i = 0; i < name.length; i++) { %>
-     <h4><%= name[i] %> </h4>
-     <p> <%= cursos[i].link %> </p>
-    <% } %>
-  <p><%= cursos[0].link %> </p>
+    <div class="contenedor">
+      <h3>Curso</h3>
+      <% for(let i = 0; i < 2 ; i++) { %>
+      <h4><a href="/<%= cursos[i].link %>"><%= name[i] %> </a></h4>
+      <% } %>
+    </div>
+
+    
     
     <!-- <script src="/javascripts/cargcarCursos.js"></script> -->
 
