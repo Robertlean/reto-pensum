@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,49 +11,37 @@
 
   <h4>Ver ejemplo <a href="/muestra">Aquí</a></h4>
   <div class="pentagono">
-        <svg id="svgContainer" height="200" width="250">
-      <polygon id="poligono" points="" style="fill:#cac4a7; stroke:#e5e5e5; stroke-width:5;"></polygon>
+    
+    <svg id="svgContainer" height="300" width="350" style="position: absolute; top:5em; left: 24em ">            
+      <polygon id="poligono" points="100 90, 187 42, 272 90, 272 184, 187 233, 100 184" style="fill:#cac4a7; stroke:#e5e5e5; stroke-width:15;"></polygon>
+      <text x="120" y="110">curso</text>
+      <text x="120" y="132"><%= name[0]%></text>
     </svg>
-    <script>
-      var cx = 125;
-      var cy = 100;
-      var r = 80;
-      var lados = 6;
-      // la función points
-      function points(cx, cy, r, lados){
-      var a = 180/lados;
-      // inicia la variable points
-      var points= (cx+r)+","+cy+" ";
-      // calcula el resto de los puntos
-          for(var i=1;i <= lados;i++){
-              var aRad=  (Math.PI / 90) * (a*i);
-              Xp = cx+r * Math.cos(aRad);
-              Yp = cy+r * Math.sin(aRad);
-              points += Xp+","+Yp+" ";
-          }
-      // devuelve la variable points			
-      return points	
-      }
-      // busca el elemento #poligono
-      var poligono = document.getElementById("poligono");	
-      // modifica el valor del atributo points utilizando la función points.
-      poligono.setAttribute("points", points(cx, cy, r, lados));
-    </script>
 
-    <div class="contenedor">
-      <h3>Curso</h3>
-      <% for(let i = 0; i < 2 ; i++) { %>
-      <h4><a href="/<%= cursos[i].link %>"><%= name[i] %> </a></h4>
+    <% let x = 0;%>
+
+    <% for( let i = 1; i < name.length; i++ ) { %>
+      <% let cont = 0 %>
+      <% for( let j = 0; j < cursos.length; j++ ) { %>      
+        <% for( let k = 0; k < cursos[j].requires.length; k++ ) { %>
+          <% if (cursos[j].requires[k] == name[i]) { %>
+           <% cont = cont+1 %> 
+          <% } %>
+        <% } %>
+       
       <% } %>
-    </div>
+      <% y = 24+(6*Math.pow(-1,cont)) %> 
+      <% x = x+10  %>
+      <svg id="svgContainer" height="300" width="350" style="position: absolute; top:  <%= 5+x %>em; left: <%= y %>em  ">            
+        <polygon id="poligono" points="100 90, 187 42, 272 90, 272 184, 187 233, 100 184" style="fill:#cac4a7; stroke:#e5e5e5; stroke-width:15;"></polygon>
+        <text x="120" y="110">curso</text>
+        <text x="120" y="132"><%= name[i]%></text>
+      </svg>
 
-    
-    
-    <!-- <script src="/javascripts/cargcarCursos.js"></script> -->
+    <% } %>
 
   </div>
-
-  
+ 
   
 </body>
 </html>
