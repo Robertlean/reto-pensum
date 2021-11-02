@@ -28,7 +28,7 @@ Each author retains the rights to his/her code, but each entry shall have a OSI 
 ### Run the app 
 
 #### `npm stat`
-- - Install NodeJs dependencies on your computer
+- Runs the app.\ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 ###Observations
 
